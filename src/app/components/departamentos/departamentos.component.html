@@ -9,6 +9,7 @@
         <th>Localidad</th>
         <th>Modificar</th>
         <th>Eliminar</th>
+        <th>Empleados</th>
       </tr>
     </thead>
     <tbody>
@@ -23,6 +24,9 @@
           <button class="btn btn-danger" (click)="eliminarDepartamento(dep.numero)">
             Eliminar
           </button>
+        </td>
+        <td>
+          <a [routerLink]="['empleados/' + dep.numero ]" class="btn btn-info">EMPLEADOS</a>
         </td>
       </tr>
     </tbody>

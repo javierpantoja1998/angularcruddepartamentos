@@ -43,5 +43,10 @@ export class DepartamentosService {
     return this._http.delete(url);
   }
 
+  getEmpleados(id:number): Observable<any>{
+    var request = "api/Empleados/EmpleadosDepartamento/" + id;
+    var url = environment.urlApiEmpleados + request;
+    return this._http.get(url);
+  }
 }
 

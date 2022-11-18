@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  urlDepartamentos:"https://apicruddepartamentoscore.azurewebsites.net/"
+  urlDepartamentos:"https://apicruddepartamentoscore.azurewebsites.net/",
+  urlApiEmpleados: "https://apiempleadosfullstack.azurewebsites.net/"
 };
 
 /*

@@ -10,13 +10,15 @@ import { routing, appRoutingProviders } from 'src/app.routing';
 import { DepartamentosService } from './services/departamentos.services';
 import { InsertardepartamentoComponent } from './components/insertardepartamento/insertardepartamento.component';
 import { ModificardepartamentoComponent } from './components/modificardepartamento/modificardepartamento.component';
+import { EmpleadosdepartamentoComponent } from './components/empleadosdepartamento/empleadosdepartamento.component';
 @NgModule({
   declarations: [
     AppComponent,
     MenurutasComponent,
     DepartamentosComponent,
     InsertardepartamentoComponent,
-    ModificardepartamentoComponent
+    ModificardepartamentoComponent,
+    EmpleadosdepartamentoComponent
   ],
   imports: [
     BrowserModule,
