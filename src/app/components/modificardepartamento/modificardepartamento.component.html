@@ -1,1 +1,14 @@
-<p>modificardepartamento works!</p>
+<div>
+  <form #editForm="ngForm">
+    <label>ID:</label>
+    <input type="hidden" class="form-control" name="cajanumero" #cajanumero value="{{departamento.numero}}"/>
+    <label>NOMBRE:</label>
+    <input type="text" class="form-control" name="cajanombre" #cajanombre/>
+    <label>LOCALIDAD:</label>
+    <input type="text" class="form-control" name="cajalocalidad" #cajalocalidad/><br>
+    <button class="btn btn-success" (click)="updateDepartamento()">
+      Crear Departamento
+    </button>
+  </form>
+</div>
+
