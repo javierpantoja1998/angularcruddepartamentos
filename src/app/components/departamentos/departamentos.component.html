@@ -1,0 +1,24 @@
+<div>
+  <img *ngIf="!departamentos" src="./../../../assets/images/load.gif"/>
+  <h1 style="color:mediumslateblue ; text-align:center">TABLA DEPARTAMENTOS</h1>
+  <table class="table table-bordered table-info" style="width: 400px; margin:0 auto">
+    <thead>
+      <tr>
+        <th>Numero</th>
+        <th>Nombre</th>
+        <th>Localidad</th>
+        <th>Modificar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dep of departamentos">
+        <td>{{dep.numero}}</td>
+        <td>{{dep.nombre}}</td>
+        <td>{{dep.localidad}}</td>
+        <td>
+          <a [routerLink]="['modificar/' + dep.numero + '/' + dep.nombre + '/' + dep.localidad]">MODIFICAR</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
