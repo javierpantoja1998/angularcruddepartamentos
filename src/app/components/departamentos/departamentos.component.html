@@ -8,6 +8,7 @@
         <th>Nombre</th>
         <th>Localidad</th>
         <th>Modificar</th>
+        <th>Eliminar</th>
       </tr>
     </thead>
     <tbody>
@@ -16,7 +17,12 @@
         <td>{{dep.nombre}}</td>
         <td>{{dep.localidad}}</td>
         <td>
-          <a [routerLink]="['modificar/' + dep.numero + '/' + dep.nombre + '/' + dep.localidad]">MODIFICAR</a>
+          <a [routerLink]="['modificar/' + dep.numero + '/' + dep.nombre + '/' + dep.localidad]" class="btn btn-info">MODIFICAR</a>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="eliminarDepartamento(dep.numero)">
+            Eliminar
+          </button>
         </td>
       </tr>
     </tbody>

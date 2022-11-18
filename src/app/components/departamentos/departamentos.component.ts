@@ -17,10 +17,19 @@ export class DepartamentosComponent implements OnInit {
 
 
   //Hacemos el get del service aqui
-  ngOnInit(): void {
-
+  loadDepartamentos(){
     this._service.getDepartamentos().subscribe(res=>{
       this.departamentos = res;
+    });
+  }
+
+  ngOnInit(): void {
+    this.loadDepartamentos();
+  }
+
+  eliminarDepartamento(id: number){
+    this._service.deleteDepartamento(id.toString()).subscribe(res=>{
+      this.loadDepartamentos();
     });
   }
 
